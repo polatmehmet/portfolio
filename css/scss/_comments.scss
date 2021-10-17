@@ -1,0 +1,68 @@
+#comments {
+    padding: 5rem 0;
+    .comments-wrap {
+        h3 {
+            font-weight: 900;
+            font-size: 2rem;
+            color: $yellow;
+        }
+    }
+    label {
+        padding-top: 2rem;
+        padding-bottom: .5rem;
+        font-size: .7rem;
+        font-weight: 700;
+        letter-spacing: .1rem;
+        color: rgba($color: $white, $alpha: .5);
+    }
+    input, textarea {
+        background-color: rgba($color: $white, $alpha: .1rem);
+        border: none;
+        padding: 1rem 2rem;
+        color: $white;
+        outline: none;
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+    textarea {
+        margin-bottom: 3rem;
+    }
+    .comment-list {
+        padding-top: 2rem;
+        .item {
+            background-color: rgba($color: $white, $alpha: .1);
+            padding: 2rem;
+            margin-left: 2rem;
+            border-radius: .2rem;
+            margin-bottom: 2rem;
+            .comment {
+                h4,strong {
+                    color: $white;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    strong {
+                        color: $yellow;
+                    }
+                }
+                p {
+                    font-size: .8rem;
+                    color: rgba($color: $white, $alpha: .3);
+                    font-weight: 400;
+                }
+            }
+            .others {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .remove {
+                    i {
+                        font-size: 1.5rem;
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}

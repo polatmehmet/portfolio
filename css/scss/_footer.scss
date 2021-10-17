@@ -1,0 +1,50 @@
+footer {
+    padding: 5rem 0;
+    .footer-box {
+        margin-bottom: 2rem;
+        &:first-of-type {
+            padding-right: 3rem;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            letter-spacing: .05rem;
+            color: $white;
+            opacity: .5;
+        }
+        a {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.8rem;
+            letter-spacing: .05rem;
+            color: $white;
+            opacity: .5;
+            i {
+                margin-right: .5rem;
+            }
+            &:hover {
+                color: $yellow;
+            }
+        }
+        .address {
+            li {
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-start;
+                p {
+                    font-size: 1rem;
+                    letter-spacing: 0;
+                }
+                i {
+                    font-weight: 900;
+                    font-size: 1rem;
+                    color: $white;
+                    margin-right: 1rem;
+                    margin-top: .4rem;
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none !important;
+  &::selection{
+    background-color: $yellow;
+    color: #252525;
+  }
+}
+body {
+  *{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  line-height: 20px;
+  color: #898989;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: $background;
+  position: relative;
+}
+body::-webkit-scrollbar {
+  width: 3px;
+  background-color: #1c1c1c;
+}
+ 
+body::-webkit-scrollbar-track {
+  background-color: #1c1c1c;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: $yellow;
+  outline: none;
+}
+
+a {
+  display: inline-block;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  color: $white;
+  &:hover {
+    color: $white;
+  }
+}
+a,
+a:active,
+a:focus {
+  text-decoration: none !important;
+}
+:focus {
+  outline: none !important;
+}
+::-moz-focus-inner {
+  border: 0 !important;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+textarea {
+  resize: none;
+}
+img {
+  max-width: 100%;
+}
+.font {
+} /* Second font family */
+p,
+span,
+strong,
+b {
+  font-size: 14px;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Futura', sans-serif;
+}
+svg path{
+  fill: $white;
+  transition: all 0.5s ease;
+}
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 1px 0 $yellow;
+}
