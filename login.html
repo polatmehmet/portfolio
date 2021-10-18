@@ -1,0 +1,232 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+	<div class="login-wrap">
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item" role="presentation">
+				<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="home" aria-selected="true">Login</button>
+			</li>
+			<li class="nav-item" role="presentation">
+				<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="profile" aria-selected="false">Register</button>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="home-tab">
+				<form id="login" novalidate>
+					<div class="mb-3">
+						<input type="email" class="form-control round has-validation" id="mail" placeholder="E-mail Adresiniz" aria-describedby="emailHelp" required>
+						<div class="invalid-feedback empty">
+							Bu alan boş bırakılamaz.
+						</div>
+						<div class="invalid-feedback wrong">
+							Lütfen geçerli bir mail adresi giriniz.
+						</div>
+					</div>
+					<div class="mb-3 eye-wrap">
+						<input type="password" class="form-control round" placeholder="Şifreniz" id="password" required>
+						<div class="invalid-feedback empty">
+							Bu alan boş bırakılamaz.
+						</div>
+						<div class="invalid-feedback wrong">
+							Lütfen geçerli bir şifre giriniz.
+						</div>
+						<a href="javascript:;" class="eye"><i class="fas fa-eye"></i> </a>
+					</div>
+					<div class="row">
+						<div class="col">
+							<a href="javascript:;" class="forgot">Şifremi Unuttum</a>
+						</div>
+						<div class="col">
+							<div class="mb-3 form-check to-right">
+								<input type="checkbox" class="form-check-input" id="remember">
+								<label class="form-check-label" for="remember">Beni Hatırla</label>
+							</div>
+						</div>
+					</div>
+					<div class="center">
+						<button type="submit" id="do-login" class="btn btn-primary submit" disabled>GİRİŞ YAP</button>
+					</div>
+				</form>
+			</div>
+			<div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="profile-tab">
+				<form class="register needs-validation" novalidate id="registerForm">
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+							  <input type="text" name="name" id="name" class="form-control round" required placeholder="Adınız">
+							</div>
+						</div>
+						<div class="col">
+							<div class="form-group">
+							  <input type="text" name="surname" id="surname" class="form-control round" required placeholder="Soyadınız">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					  <input type="email" id="mailRegister" class="form-control round" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+					</div>
+					<div class="form-group eye-wrap">
+					  <input type="password" class="form-control round" id="paswordRegister" placeholder="Password">
+					  <a href="javascript:;" class="eye"><i class="fas fa-eye"></i> </a>
+					</div>
+					<div class="form-group eye-wrap">
+					  <input type="password" class="form-control round" id="paswordRegisterAgain" placeholder="Password">
+					  <a href="javascript:;" class="eye"><i class="fas fa-eye"></i> </a>
+					</div>
+					<div class="form-group form-check mt-10">
+						<input type="checkbox" class="form-check-input" id="onay">
+						<label class="form-check-label" for="onay"><a href="" class="yellow">Üyelik Koşullarını</a> ve kişisel verilerin korunmasını kabul ediyorum.</label>
+					</div>
+					<div class="center">
+						<button type="submit" id="registerBtn" class="btn btn-primary submit" disabled>ÜYE OL</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+	  $( document ).ready(function() {
+			let status= false;
+			let mailStatus = false;
+			let pasStatus = false;
+			$('.eye').click(function (){
+				let eye = $(this).find('.fa-eye');
+				let pass = $(this).parent().find('input');
+				let passAttr = pass.attr('type');
+				eye.toggleClass('fa-eye-slash');
+				passAttr == 'password' ? pass.attr('type', 'text') : pass.attr('type', 'password');
+			});
+			$('#login').on( "submit", function (e) {
+        		e.preventDefault();
+				if (status) {
+					let mail = $('#mail').val();
+					let pass = $('#password').val();
+					values = {
+						'mail': mail,
+						'password': pass,
+					}
+					$.ajax({
+						url: "test.php",
+						type: "post",
+						data: values ,
+						success: function (response) {
+							// Response => Mailiniz başarıyla gönderildi.
+							alert(response);
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+						console.log(textStatus, errorThrown);
+						}
+					});
+				}
+			});
+			$('#onay').click(function () {
+				let disBtn = $('#registerBtn').attr('disabled');
+				if (!disBtn) {
+					$('#registerBtn').attr('disabled', 'disabled');
+				} else {
+					$('#registerBtn').removeAttr('disabled');
+				}
+			});
+			$('#registerForm').submit(function (e) {
+        		e.preventDefault();
+				let name = $('#name').val();
+				let surname = $('#surname').val();
+				let mail = $('#mailRegister').val();
+				let pass = $('#paswordRegister').val();
+				let passAgain = $('#paswordRegisterAgain').val();
+				if (pass == passAgain) {
+					values = {
+						'name': name,
+						'surname': surname,
+						'mail': mail,
+						'password': pass,
+					}
+					$.ajax({
+						url: "test.php",
+						type: "post",
+						data: values ,
+						success: function (response) {
+							// Response => Mailiniz başarıyla gönderildi.
+							alert(response);
+						},
+						error: function(jqXHR, textStatus, errorThrown) {
+						console.log(textStatus, errorThrown);
+						}
+					});
+				}
+				else {
+					alert('Paswords doesnt matches')
+				}
+			});
+			$("#login input").change(function() {
+	
+				let inputType = $(this).attr('type');
+				let checkMail = /\S+@\S+.\S+/;
+				let checkPass = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+				if (inputType == 'email') {
+					let mailEl = $(this);
+					
+					let mailValue = $.trim($(this).val());
+					if (!mailValue) {
+						mailEl.parent().find('.empty').css('display', 'block');
+						mailEl.parent().find('.wrong').css('display', 'none');
+						mailEl.css('border-color', 'red');
+					} else {
+						mailEl.parent().find('.empty').css('display', 'none');
+						if (!checkMail.test(mailValue)){
+							mailEl.css('border-color', 'red');
+							mailEl.parent().find('.wrong').css('display', 'block');
+							mailStatus = false;
+						} else {
+							mailEl.css('border-color', '#f8fbfd');
+							mailEl.parent().find('.wrong').css('display', 'none');
+							mailStatus = true;
+						}
+					}
+				}
+				if (inputType == 'password') {
+					let passwordEl = $(this);
+					let passwordValue = $.trim($(this).val());
+					if (!passwordValue) {
+						passwordEl.parent().find('.empty').css('display', 'block');
+						passwordEl.parent().find('.wrong').css('display', 'none');
+						passwordEl.css('border-color', 'red');
+					} else {
+						passwordEl.parent().find('.empty').css('display', 'none');
+						if (!checkPass.test(passwordValue)){
+							passwordEl.css('border-color', 'red');
+							passwordEl.parent().find('.wrong').css('display', 'block');
+							pasStatus = false;
+						} else {
+							passwordEl.css('border-color', '#f8fbfd');
+							passwordEl.parent().find('.wrong').css('display', 'none');
+							pasStatus = true;
+						}
+					}
+				}
+				if (mailStatus && pasStatus) {
+					status = true;
+					$('#do-login').removeAttr("disabled");
+				} else {
+					$('#do-login').attr("disabled");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

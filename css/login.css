@@ -1,0 +1,91 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.login-wrap {
+    min-width: 600px;
+}
+.login-wrap .tab-content {
+    border: 1px solid #e9e9e9;
+    border-top: none;
+    padding: 4rem;
+}
+.login-wrap .tab-content form .round{
+    border-radius: 1.5rem;
+    padding: .8rem 1.6rem;
+    border: 1px solid #e9e9e9;
+    background-color: #f8fbfd;
+    color: #a5a6a7;
+    font-weight: 500;
+}
+.login-wrap .tab-content form .eye-wrap{
+    position: relative;
+}
+.login-wrap .tab-content form .eye{
+    position: absolute;
+    right: 1rem;
+    top: .8rem;
+}
+.login-wrap .tab-content form .eye i{
+    font-size: 1.5rem;
+    color: #f58221;
+}
+.login-wrap .tab-content form .round:focus{
+    box-shadow: none;
+    outline: none;
+}
+.login-wrap .tab-content form a.forgot{
+    color: #f58221;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-wrap .tab-content form .submit{
+    background-color: #f58221;
+    border: none;
+    border-radius: 2rem;
+    padding: .6rem 5rem;
+    font-weight: 600;
+    font-size: .8rem;
+}
+.login-wrap .tab-content form .submit:focus{
+    box-shadow: none;
+}
+.login-wrap .form-check-input:checked {
+    background-color: #f58221;
+    border-color: #f58221;
+}
+.login-wrap .form-check-input:focus {
+    box-shadow: none;
+}
+.login-wrap .to-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.login-wrap .to-right input{
+    margin: 0;
+    margin-right: 5px;
+}
+.login-wrap .center{
+    margin-top: 2rem;
+    text-align: center;
+}
+.login-wrap .form-control {
+    margin-top: 2rem;
+}
+.yellow {
+    color: #f58221;
+    text-decoration: none;
+}
+.form-check-label {
+    font-size: 1rem;
+}
+.mt-10 {
+    margin-top: 2rem;
+}
+.register {
+    width: 50vw;
+}
